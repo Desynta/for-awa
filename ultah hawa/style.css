@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    background: #dcecf7;
+
+    color: #496579;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.35);
+
+    animation: floating 7s infinite ease-in-out;
+}
+
+.bubble1 {
+    width: 260px;
+    height: 260px;
+
+    top: -100px;
+    left: -80px;
+}
+
+.bubble2 {
+    width: 180px;
+    height: 180px;
+
+    right: -60px;
+    top: 30%;
+
+    animation-delay: 2s;
+}
+
+.bubble3 {
+    width: 300px;
+    height: 300px;
+
+    bottom: -150px;
+    left: 20%;
+
+    animation-delay: 4s;
+}
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* ========================= */
+/* PAGE */
+/* ========================= */
+
+.page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ========================= */
+/* OPENING */
+/* ========================= */
+
+.opening {
+    text-align: center;
+
+    padding: 30px;
+}
+
+.mini-title {
+    font-size: 12px;
+
+    color: #86a7bc;
+
+    letter-spacing: 2px;
+
+    text-transform: lowercase;
+}
+
+.opening h1 {
+    margin-top: 18px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    color: #42647b;
+}
+
+.opening-text {
+    margin-top: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #668093;
+}
+
+.open-button {
+    margin-top: 30px;
+
+    padding: 13px 32px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #8eb8d2;
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    background: #719db9;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.container {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+
+    text-align: center;
+}
+
+.birthday-title {
+    margin-top: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 44px;
+
+    color: #42647b;
+}
+
+
+/* ========================= */
+/* MAIN PHOTO */
+/* ========================= */
+
+.main-photo {
+    width: 200px;
+    height: 200px;
+
+    margin: 30px auto 20px;
+
+    padding: 7px;
+
+    background: #edf7fc;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 15px 35px rgba(66,105,130,0.15);
+}
+
+.main-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.container h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    color: #42647b;
+}
+
+
+/* ========================= */
+/* LETTER */
+/* ========================= */
+
+.letter {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background: rgba(255,255,255,0.55);
+
+    border-radius: 20px;
+}
+
+.letter p {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #668093;
+}
+
+.letter p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 40px 0 20px;
+}
+
+.section-title span {
+    width: 35px;
+
+    height: 1px;
+
+    background: #a9c7d8;
+}
+
+.section-title p {
+    font-size: 11px;
+
+    color: #8aa6b9;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================= */
+/* PHOTO GRID */
+/* ========================= */
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-width: 450px;
+
+    margin: auto;
+}
+
+.memory {
+    height: 190px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #edf7fc;
+
+    box-shadow:
+        0 8px 20px rgba(66,105,130,0.10);
+}
+
+.memory:nth-child(5) {
+    grid-column: span 2;
+
+    height: 230px;
+}
+
+.memory img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.memory:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ========================= */
+/* MUSIC */
+/* ========================= */
+
+.music-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    max-width: 400px;
+
+    margin: 35px auto 0;
+
+    padding: 13px;
+
+    background: #edf7fc;
+
+    border: 1px solid #dcecf5;
+
+    border-radius: 18px;
+
+    text-align: left;
+}
+
+.music-symbol {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 13px;
+
+    background: #c5dfef;
+
+    color: #54778d;
+
+    font-size: 20px;
+}
+
+.music-info {
+    flex: 1;
+}
+
+.music-info small {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #91aebe;
+
+    text-transform: uppercase;
+}
+
+.music-info strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color: #547286;
+}
+
+#musicButton {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #8eb8d2;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    background: #719db9;
+
+    transform: scale(1.05);
+}
+
+
+/* ========================= */
+/* LAST MESSAGE */
+/* ========================= */
+
+.last-message {
+    margin-top: 65px;
+
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.55);
+
+    border-radius: 24px;
+}
+
+.last-message h2 {
+    margin: 12px 0;
+
+    font-size: 26px;
+}
+
+.last-message > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #668093;
+}
+
+
+/* ========================= */
+/* QR */
+/* ========================= */
+
+.qr-section {
+    margin-top: 55px;
+}
+
+.qr-small {
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    color: #547286;
+
+    margin-bottom: 18px;
+}
+
+.qr-box {
+    width: 180px;
+    height: 180px;
+
+    padding: 12px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(66,105,130,0.12);
+}
+
+.qr-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.qr-info {
+    margin-top: 13px;
+
+    font-size: 11px;
+
+    color: #91aebe;
+}
+
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    margin-top: 45px;
+
+    font-size: 10px;
+
+    color: #9db4c2;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 500px) {
+
+    .opening h1 {
+        font-size: 37px;
+    }
+
+    .birthday-title {
+        font-size: 37px;
+    }
+
+    .container {
+        padding: 50px 18px;
+    }
+
+    .main-photo {
+        width: 175px;
+        height: 175px;
+    }
+
+    .memory {
+        height: 160px;
+    }
+
+    .memory:nth-child(5) {
+        height: 200px;
+    }
+
+    .letter {
+        padding: 20px;
+    }
+}
